@@ -88,11 +88,16 @@ body * {
   left: 0;
   z-index: 1; /*muda o andar de posição do objeto dentro do grupo*/
   transform: translateY(-50%);
+
+  animation: slide-to-dark 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-to-light 0.2s forwards; /*fowards mantem a propriedade da animação definida no keyframes*/
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -170,5 +175,23 @@ ul li a:hover {
 
   .light {
     --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-to-light {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-to-dark {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
