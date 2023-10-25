@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*Faz o conteúdo se ajustar ao tamanho de borda definida. O "content-box" faz a borda se ajustar ao tamanho do conteúdo.*/
+  box-sizing: border-box;
 }
 
 :root {
@@ -25,17 +25,10 @@
 }
 
 body {
-  /*
-  background-image: url(./assets/assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  */
-
-  /*  SHORT HAND: background: color image repeat positoin/size */
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
 }
+
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
@@ -44,14 +37,9 @@ body * {
 #container {
   width: 100%;
   max-width: 588px;
-  margin: 56px auto 0px auto; /*funciona como um relógio começando por TOP*/
-  /*margin: auto; aplica só nas laterais, sob regra do css*/
+  margin: 56px auto 0px auto;
   padding: 0 24px;
 }
-
-/*Display Inline (IMG, <a>) não aceitam formatação margin: auto; Para aplicar o maring: auto; precisa transformar em block, display: block;. Outra opção é formatar os elementos inline PAI com text-align: center/left/righ. */
-
-/*Profile*/
 
 #profile {
   text-align: center;
@@ -67,8 +55,6 @@ body * {
   line-height: 24px;
   margin-top: 8px;
 }
-
-/*Switch*/
 
 #switch {
   position: relative;
@@ -86,14 +72,14 @@ body * {
   position: absolute;
   top: 50%;
   left: 0;
-  z-index: 1; /*muda o andar de posição do objeto dentro do grupo*/
+  z-index: 1;
   transform: translateY(-50%);
 
   animation: slide-to-dark 0.2s;
 }
 
 .light #switch button {
-  animation: slide-to-light 0.2s forwards; /*fowards mantem a propriedade da animação definida no keyframes*/
+  animation: slide-to-light 0.2s forwards;
 }
 
 #switch button:hover {
@@ -110,8 +96,6 @@ body * {
   --webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
-
-/*links */
 
 ul {
   list-style: none;
@@ -144,8 +128,6 @@ ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
-
-/*Social Media Links*/
 
 #social-links {
   display: flex;
