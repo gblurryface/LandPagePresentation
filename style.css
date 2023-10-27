@@ -1,17 +1,18 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*Faz o conteúdo se ajustar ao tamanho de borda definida. O "content-box" faz a borda se ajustar ao tamanho do conteúdo.*/
+  box-sizing: border-box;
 }
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/assets/bg-mobile-dark.png);
+  --bg-url: url(./assets/assets/bg-mobile-dark2.png);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/assets/moon-stars.svg);
+  --nowrap-standard: wrap;
 }
 
 .light {
@@ -25,15 +26,7 @@
 }
 
 body {
-  /*
-  background-image: url(./assets/assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  */
-
-  /*  SHORT HAND: background: color image repeat positoin/size */
-  background: var(--bg-url) no-repeat top center/cover;
+  background: var(--bg-url) repeat-y top center/cover;
   height: 100vh;
 }
 body * {
@@ -44,14 +37,9 @@ body * {
 #container {
   width: 100%;
   max-width: 588px;
-  margin: 56px auto 0px auto; /*funciona como um relógio começando por TOP*/
-  /*margin: auto; aplica só nas laterais, sob regra do css*/
+  margin: 56px auto 0px auto;
   padding: 0 24px;
 }
-
-/*Display Inline (IMG, <a>) não aceitam formatação margin: auto; Para aplicar o maring: auto; precisa transformar em block, display: block;. Outra opção é formatar os elementos inline PAI com text-align: center/left/righ. */
-
-/*Profile*/
 
 #profile {
   text-align: center;
@@ -67,8 +55,6 @@ body * {
   line-height: 24px;
   margin-top: 8px;
 }
-
-/*Switch*/
 
 #switch {
   position: relative;
@@ -86,14 +72,14 @@ body * {
   position: absolute;
   top: 50%;
   left: 0;
-  z-index: 1; /*muda o andar de posição do objeto dentro do grupo*/
+  z-index: 1;
   transform: translateY(-50%);
 
   animation: slide-to-dark 0.2s;
 }
 
 .light #switch button {
-  animation: slide-to-light 0.2s forwards; /*fowards mantem a propriedade da animação definida no keyframes*/
+  animation: slide-to-light 0.2s forwards;
 }
 
 #switch button:hover {
@@ -110,8 +96,6 @@ body * {
   --webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
-
-/*links */
 
 ul {
   list-style: none;
@@ -145,8 +129,6 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
-/*Social Media Links*/
-
 #social-links {
   display: flex;
   padding: 24px 0;
@@ -170,7 +152,8 @@ ul li a:hover {
 
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/assets/bg-desktop-dark.png);
+    --bg-url: url(./assets/assets/bg-desktop-dark2.png);
+    --nowrap-standard: nowrap;
   }
 
   .light {
@@ -194,4 +177,67 @@ ul li a:hover {
   to {
     left: 0;
   }
+}
+
+#container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#back-button {
+  display: flex;
+  width: max-content;
+  height: max-content;
+  padding: 10px;
+  margin: 10px;
+}
+
+#switch-profile {
+  display: flex;
+  width: max-content;
+  height: max-content;
+  padding: 10px;
+  margin: 10px;
+}
+
+#container2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto 0px auto;
+  padding: 0 24px;
+}
+
+#block_1,
+#block_2,
+#block_3,
+#block_4 {
+  margin: 15px auto;
+  display: flex;
+  flex-wrap: var(--nowrap-standard);
+  justify-content: center;
+  align-items: center;
+}
+
+#block_1 img,
+#block_2 img,
+#block_3 img {
+  width: fit-content;
+  height: 230px;
+  border-radius: 30px;
+  align-items: center;
+}
+
+#name_profile {
+  margin: 10px;
+  text-align: justify;
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
 }
