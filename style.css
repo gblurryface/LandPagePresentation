@@ -156,7 +156,6 @@ ul li a:hover {
     --bg-url: url(./assets/assets/bg-desktop-dark2.png);
     --nowrap-standard: nowrap;
   }
-
   .light {
     --bg-url: url(./assets/assets/bg-desktop-light.png);
   }
