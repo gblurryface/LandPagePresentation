@@ -11,6 +11,6 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Este projeto foi desenvolvido com o foco de centralizar minhas informações e servir como um portfólio inicial para apresentar minhas capacidades de design báscias dpara o desenvolvimento Front-End.
+Este projeto foi desenvolvido com o foco de centralizar minhas informações e servir como um portfólio inicial para apresentar minhas capacidades de design básicas para o desenvolvimento Front-End.
 
 Você pode acessar clicando aqui: [Projeto](https://gblurryface.github.io/LandingPagePresentation/)
